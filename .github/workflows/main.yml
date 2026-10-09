@@ -1,4 +1,9 @@
 jobs:
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
       build:
         runs-on: ubuntu-latest
         steps:
