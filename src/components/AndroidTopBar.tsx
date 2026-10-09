@@ -42,7 +42,8 @@ const INDIAN_LANGUAGES: { code: SupportedLanguage; label: string; script: string
   { code: 'hi', label: 'हिन्दी', script: 'Hindi' },
   { code: 'te', label: 'తెలుగు', script: 'Telugu' },
   { code: 'kn', label: 'ಕನ್ನಡ', script: 'Kannada' },
-  { code: 'ta', label: 'தமிழ்', script: 'Tamil' }
+  { code: 'ta', label: 'தமிழ்', script: 'Tamil' },
+  { code: 'gu', label: 'ગુજરાતી', script: 'Gujarati' }
 ];
 
 export const AndroidTopBar: React.FC<AndroidTopBarProps> = ({

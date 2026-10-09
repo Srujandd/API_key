@@ -42,7 +42,8 @@ const LANG_NAMES: Record<string, string> = {
   hi: 'Hindi (हिन्दी)',
   te: 'Telugu (తెలుగు)',
   kn: 'Kannada (ಕನ್ನಡ)',
-  ta: 'Tamil (தமிழ்)'
+  ta: 'Tamil (தமிழ்)',
+  gu: 'Gujarati (ગુજરાતી)'
 };
 
 // Candidate models for highest resilience & low latency
@@ -51,7 +52,7 @@ const CANDIDATE_MODELS = ['gemini-3.8-flash', 'gemini-3.1-flash-lite'];
 // REST API: GET /api/samples
 app.get('/api/samples', (req, res) => {
   const lang = (req.query.lang as string) || 'en';
-  const validLang = (['en', 'hi', 'te', 'kn', 'ta'].includes(lang) ? lang : 'en') as any;
+  const validLang = (['en', 'hi', 'te', 'kn', 'ta', 'gu'].includes(lang) ? lang : 'en') as any;
   const samples = getLocalizedSamples(validLang);
   res.json({ success: true, samples });
 });
@@ -63,7 +64,7 @@ app.get('/api/ai-status', (_req, res) => {
     model: 'gemini-3.8-flash',
     hasKey: Boolean(process.env.GEMINI_API_KEY),
     provider: 'Server-Side Diagnostic Engine',
-    supportedLanguages: ['en', 'hi', 'te', 'kn', 'ta'],
+    supportedLanguages: ['en', 'hi', 'te', 'kn', 'ta', 'gu'],
     fallbackEngines: ['gemini-3.1-flash-lite', 'localized-knowledge-engine']
   });
 });
@@ -299,7 +300,8 @@ app.post('/api/transcribe', async (req, res) => {
       hi: 'ऑडियो को शुद्ध हिन्दी (देवनागरी लिपि) में ट्रांसक्राइब करें। केवल बोले गए शब्द लिखें, कोई अतिरिक्त टिप्पणी न करें।',
       te: 'ఆడియోను స్వచ్ఛమైన తెలుగు లిపిలో (Telugu script) మాత్రమే ట్రాన్స్‌క్రైబ్ చేయండి. ఎటువంటి వివరణలు లేదా ఆంగ్ల అనువాదం లేకుండా రైతు మాట్లాడిన మాటలను యథాతథంగా రాయండి.',
       kn: 'ಆಡಿಯೋವನ್ನು ಶುದ್ಧ ಕನ್ನಡ ಲಿಪಿಯಲ್ಲಿ (Kannada script) ಮಾತ್ರ ಟ್ರಾನ್ಸ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಿ. ಯಾವುದೇ ಹೆಚ್ಚುವರಿ ವಿವರಣೆ ಬೇಡ.',
-      ta: 'ஆடியோவை தூய தமிழ் எழுத்துக்களில் (Tamil script) மட்டும் டிரான்ஸ்கிரைப் செய்யவும். கூடுதல் விளக்கம் எதுவும் தேவையில்லை.'
+      ta: 'ஆடியோவை தூய தமிழ் எழுத்துக்களில் (Tamil script) மட்டும் டிரான்ஸ்கிரைப் செய்யவும். கூடுதல் விளக்கம் எதுவும் தேவையில்லை.',
+      gu: 'ઓડિયોને શુદ્ધ ગુજરાતી લિપિમાં (Gujarati script) જ ટ્રાન્સક્રાઇબ કરો. માત્ર બોલાયેલા શબ્દો જ લખો, કોઈ વધારાની ટિપ્પણી ન કરો.'
     };
 
     const instruction = langInstructions[lang] || langInstructions.en;

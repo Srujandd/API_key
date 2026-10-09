@@ -132,6 +132,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <option value="te">తెలుగు (Telugu)</option>
                 <option value="kn">ಕನ್ನಡ (Kannada)</option>
                 <option value="ta">தமிழ் (Tamil)</option>
+                <option value="gu">ગુજરાતી (Gujarati)</option>
               </select>
             </div>
           </div>

@@ -290,6 +290,69 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'காலை வேளையில்', weatherPrecautions: 'மழை இல்லாத போது', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'மருந்து தெளிப்பு', actionRequired: 'ரிடோமில் கோல்ட் தெளிக்கவும்' }]
+    },
+    gu: {
+      cropName: 'ટામેટા',
+      scientificName: 'Solanum lycopersicum',
+      diagnosisName: 'પાછોતરો સુકારો (લેટ બ્લાઈટ)',
+      scientificPathogen: 'Phytophthora infestans',
+      issueType: 'ફૂગજન્ય રોગ',
+      severityLevel: 'ગંભીર',
+      healthScore: 32,
+      affectedAreaPercentage: 42,
+      confidenceScore: 96,
+      summary: 'પાંદડા પર ઘેરા ભૂરા રંગના પાણી જેવા ડાઘા ઝડપથી ફેલાઈ રહ્યા છે. વધુ ભેજ અને ઠંડા વાતાવરણમાં આ રોગ આખા પાકને નુકસાન કરી શકે છે.',
+      farmerVernacularSummary: 'તમારા ટામેટાના પાકમાં પાછોતરા સુકારાનો રોગ લાગ્યો છે. તાત્કાલિક ફૂગનાશક દવાનો છંટકાવ કરો નહીંતર 3 થી 5 દિવસમાં પાક બગડી શકે છે.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડાની કિનારીઓથી ડાઘા ફેલાઈને આખા પાનને સૂકવી નાખે છે.',
+        spreadRate: 'અત્યંત ઝડપી (48 કલાકમાં)',
+        potentialYieldLossPercent: 65,
+        vulnerableParts: ['પાંદડા', 'થડ', 'ફળ']
+      },
+      visualSymptoms: [
+        'પાંદડાની ટોચ પર પાણીથી પલળેલા ભૂરા ડાઘા',
+        'ડાઘાની ફરતે આછું પીળું વર્તુળ',
+        'સવારના સમયે પાંદડાની નીચેની સપાટી પર સફેદ ફૂગ'
+      ],
+      treatmentPlan: {
+        immediateSteps: [
+          'ચેપগ্রস্ত નીચેના પાંદડા તોડીને ખાડામાં દાટી દો',
+          'ફુવારા પદ્ધતિથી પિયત બંધ કરો અને ટપક સિંચાઈનો ઉપયોગ કરો',
+          '24 કલાકની અંદર આખા ખેતરમાં ફૂગનાશક દવાનો છંટકાવ કરો'
+        ],
+        organicSolutions: [
+          {
+            name: 'બોર્ડો મિશ્રણ (1%)',
+            preparation: '1 કિલો મોરથૂથુ અને 1 કિલો ચૂનો 100 લિટર પાણીમાં ભેળવો',
+            applicationRate: 'પાંદડા પર સમાન રીતે છંટકાવ કરો',
+            frequency: 'વરસાદી વાતાવરણમાં દર 7-10 દિવસે'
+          }
+        ],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'મેટાલેક્સિલ-એમ 4% + મેન્કોઝેબ 64% WP',
+            commercialNames: 'રિડોમિલ ગોલ્ડ',
+            dosagePerLiter: '2.5 ગ્રામ પ્રતિ લિટર પાણી (16L પંપમાં 40 ગ્રામ)',
+            recommendedDilution: '500 ગ્રામ પ્રતિ એકર 200 લિટર પાણીમાં',
+            safetyWaitingPeriodDays: 7
+          }
+        ],
+        preventativeMeasures: [
+          'છોડ વચ્ચે 60 સે.મી.નું અંતર રાખો',
+          'ટામેટાના છોડને ટેકો આપી જમીનથી ઉપર રાખો'
+        ],
+        sprayingGuidelines: {
+          bestTiming: 'સવારે 7 થી 9:30 વાગ્યે ઝાકળ સુકાયા પછી',
+          weatherPrecautions: 'વરસાદની શક્યતા હોય ત્યારે છંટકાવ ન કરો',
+          ppeRequired: ['મોજાં', 'માસ્ક', 'ચશ્મા']
+        }
+      },
+      recoveryTimeline: [
+        { day: 1, expectedMilestone: 'દવાની અસર', actionRequired: 'રિડોમિલ ગોલ્ડનો છંટકાવ કરો' },
+        { day: 3, expectedMilestone: 'ડાઘા સુકાવા', actionRequired: 'તપાસો કે ડાઘા સુકાઈ રહ્યા છે' },
+        { day: 7, expectedMilestone: 'નવા પાંદડા', actionRequired: 'મેન્કોઝેબનો રક્ષણાત્મક છંટકાવ કરો' },
+        { day: 14, expectedMilestone: 'પાક સુધારો', actionRequired: '19:19:19 ખાતરનો છંટકાવ કરો' }
+      ]
     }
   },
   'sample-rice-blast': {
@@ -485,6 +548,42 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'காலை வேளையில்', weatherPrecautions: 'மழையற்ற போது', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'மருந்து தெளிப்பு', actionRequired: 'டிரைசைக்ளசோல் தெளிக்கவும்' }]
+    },
+    gu: {
+      cropName: 'ડાંગર (ચોખા)',
+      scientificName: 'Oryza sativa',
+      diagnosisName: 'કર઼પા રોગ (રાઈસ બ્લાસ્ટ)',
+      scientificPathogen: 'Magnaporthe oryzae',
+      issueType: 'ફૂગજન્ય રોગ',
+      severityLevel: 'મધ્યમ',
+      healthScore: 58,
+      affectedAreaPercentage: 28,
+      confidenceScore: 96,
+      summary: 'પાંદડા પર ત્રાક આકારના રાખોડી રંગના ડાઘા જોવા મળે છે.',
+      farmerVernacularSummary: 'ડાંગરમાં કર઼પા (બ્લાસ્ટ) રોગ લાગ્યો છે. યુરિયા ખાતર તાત્કાલિક બંધ કરો અને ટ્રાયસાયક્લાઝોલનો છંટકાવ કરો.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડા સુકાઈ જાય છે અને કંટીની ગરદન તૂટી જાય છે.',
+        spreadRate: 'મધ્યમ',
+        potentialYieldLossPercent: 40,
+        vulnerableParts: ['પાંદડા', 'કંટીની ગરદન']
+      },
+      visualSymptoms: ['ત્રાક આકારના રાખોડી રંગના ડાઘા'],
+      treatmentPlan: {
+        immediateSteps: ['યુરિયા ખાતર આપવાનું બંધ કરો', 'ટ્રાયસાયક્લાઝોલનો છંટકાવ કરો'],
+        organicSolutions: [],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'ટ્રાયસાયક્લાઝોલ 75% WP',
+            commercialNames: 'બીમ, બાણ',
+            dosagePerLiter: '0.6 ગ્રામ પ્રતિ લિટર પાણી (16L પંપમાં 10 ગ્રામ)',
+            recommendedDilution: '120 ગ્રામ પ્રતિ એકર',
+            safetyWaitingPeriodDays: 21
+          }
+        ],
+        preventativeMeasures: ['બીજ માવજત કરો'],
+        sprayingGuidelines: { bestTiming: 'સવારે 7 થી 9:30 વાગ્યે', weatherPrecautions: 'શાંત પવનમાં છંટકાવ કરો', ppeRequired: ['માસ્ક', 'મોજાં'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'દવાનો છંટકાવ', actionRequired: 'ટ્રાયસાયક્લાઝોલનો છંટકાવ કરો' }]
     }
   },
   'sample-cotton-leaf-curl': {
@@ -689,6 +788,42 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'மாலை வேளையில்', weatherPrecautions: 'இலைகளின் அடியில் படுமாறு தெளிக்கவும்', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'பூச்சி கட்டுப்பாடு', actionRequired: 'டயாபெந்தியூரான் தெளிக்கவும்' }]
+    },
+    gu: {
+      cropName: 'કપાસ',
+      scientificName: 'Gossypium hirsutum',
+      diagnosisName: 'પાન કોકડાવાનો રોગ (સફેદ માખી જન્ય)',
+      scientificPathogen: 'સફેદ માખી દ્વારા ફેલાતો વાયરસ',
+      issueType: 'વાયરસજન્ય રોગ',
+      severityLevel: 'ગંભીર',
+      healthScore: 45,
+      affectedAreaPercentage: 38,
+      confidenceScore: 94,
+      summary: 'પાંદડા ઉપરની તરફ વળવા અને નસો જાડી થવી.',
+      farmerVernacularSummary: 'કપાસમાં સફેદ માખીના કારણે પાન કોકડાવાનો રોગ લાગ્યો છે. સફેદ માખીનું તાત્કાલિક નિયંત્રણ કરો.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડા વળીને કડક થઈ જાય છે અને છોડનો વિકાસ અટકી જાય છે.',
+        spreadRate: 'મધ્યમ',
+        potentialYieldLossPercent: 55,
+        vulnerableParts: ['નવા પાંદડા', 'ઝીંડવા']
+      },
+      visualSymptoms: ['પાંદડા ઉપરની તરફ વળવા', 'જાડી ઉપસેલી નસો'],
+      treatmentPlan: {
+        immediateSteps: ['પીળા ચીકણા ટ્રેપ લગાવો', 'ડાયફેન્થિયુરોનનો છંટકાવ કરો'],
+        organicSolutions: [],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'ડાયફેન્થિયુરોન 50% WP',
+            commercialNames: 'પોલો, પેગાસસ',
+            dosagePerLiter: '1.2 ગ્રામ પ્રતિ લિટર પાણી',
+            recommendedDilution: '250 ગ્રામ પ્રતિ એકર',
+            safetyWaitingPeriodDays: 21
+          }
+        ],
+        preventativeMeasures: ['શેઢા પરથી નીંદણ દૂર કરો'],
+        sprayingGuidelines: { bestTiming: 'સાંજના સમયે', weatherPrecautions: 'પાંદડાની નીચે સારી રીતે છંટકાવ કરો', ppeRequired: ['માસ્ક'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'જીવાત નિયંત્રણ', actionRequired: 'ડાયફેન્થિયુરોનનો છંટકાવ કરો' }]
     }
   },
   'sample-maize-fall-armyworm': {
@@ -893,6 +1028,42 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'மாலை வேளையில்', weatherPrecautions: 'குருத்தில் தெளிக்கவும்', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'புழு அழிவு', actionRequired: 'கோராசன் தெளிக்கவும்' }]
+    },
+    gu: {
+      cropName: 'મકાઈ',
+      scientificName: 'Zea mays',
+      diagnosisName: 'ફોલ આર્મીવર્મ (લશ્કરી ઈયળ)',
+      scientificPathogen: 'સ્પોડોપ્ટેરા ફ્રુગીપર્ડા',
+      issueType: 'જીવાતનો ઉપદ્રવ',
+      severityLevel: 'ગંભીર',
+      healthScore: 24,
+      affectedAreaPercentage: 55,
+      confidenceScore: 98,
+      summary: 'પાંદડામાં મોટા કાણા અને ભૂંગળીની અંદર લાકડાના વહેર જેવી ઈયળની હગાર જોવા મળે છે.',
+      farmerVernacularSummary: 'મકાઈમાં ખતરનાક ફોલ આર્મીવર્મ ઈયળ પડી છે. તાત્કાલિક કોરાજન અથવા ઈમામેક્ટીનનો છંટકાવ ભૂંગળીની અંદર કરો.',
+      damageAnalysis: {
+        leafDamageDescription: 'ઈયળ ભૂંગળીના નવા પાંદડા ખાઈને પાકને નુકસાન કરે છે.',
+        spreadRate: 'અત્યંત ઝડપી (48 કલાકમાં)',
+        potentialYieldLossPercent: 75,
+        vulnerableParts: ['ભૂંગળી', 'પાંદડા', 'ડુંડા']
+      },
+      visualSymptoms: ['પાંદડામાં મોટા કાણા', 'ભૂંગળીમાં વહેર જેવી હગાર'],
+      treatmentPlan: {
+        immediateSteps: ['દવા સીધી ભૂંગળીની અંદર છાંટો', 'કોરાજનનો છંટકાવ કરો'],
+        organicSolutions: [],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'ક્લોરાન્ટ્રાનીલીપ્રોલ 18.5% SC',
+            commercialNames: 'કોરાજન',
+            dosagePerLiter: '0.4 મિ.લી. પ્રતિ લિટર પાણી',
+            recommendedDilution: '80 મિ.લી. પ્રતિ એકર',
+            safetyWaitingPeriodDays: 14
+          }
+        ],
+        preventativeMeasures: ['ઉનાળુ ઊંડી ખેડ કરો'],
+        sprayingGuidelines: { bestTiming: 'સાંજે 5 વાગ્યા પછી', weatherPrecautions: 'સીધી ભૂંગળીમાં નોઝલ રાખી છંટકાવ કરો', ppeRequired: ['માસ્ક'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'ઈયળનો નાશ', actionRequired: 'કોરાજનનો છંટકાવ કરો' }]
     }
   },
   'sample-chilli-anthracnose': {
@@ -1089,6 +1260,42 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'காலை வேளையில்', weatherPrecautions: 'முழுமையாக தெளிக்கவும்', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'நோய் கட்டுப்பாடு', actionRequired: 'தெளிக்க வேண்டும்' }]
+    },
+    gu: {
+      cropName: 'મરચાં',
+      scientificName: 'Capsicum annuum',
+      diagnosisName: 'કોકડવા રોગ અને એન્થ્રેક્નોઝ (ડાળી સુકારો)',
+      scientificPathogen: 'થ્રિપ્સ અને કોલેટોટ્રાઈકમ',
+      issueType: 'જીવાત અને ફૂગજન્ય રોગ',
+      severityLevel: 'ગંભીર',
+      healthScore: 38,
+      affectedAreaPercentage: 44,
+      confidenceScore: 95,
+      summary: 'થ્રિપ્સથી પાંદડા હોડી જેવા વળી જાય છે અને ડાળીઓ ઉપરથી સુકાવા લાગે છે.',
+      farmerVernacularSummary: 'મરચાંમાં થ્રિપ્સ જીવાત અને ડાળી સુકાવાનો રોગ લાગ્યો છે. ફિપ્રોનિલ અને એઝોક્સીસ્ટ્રોબિનનો છંટકાવ કરો.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડા વળીને હોડી જેવા થઈ જાય છે અને ડાળીઓ ઉપરથી કાળી પડી સુકાય છે.',
+        spreadRate: 'મધ્યમ',
+        potentialYieldLossPercent: 50,
+        vulnerableParts: ['ડાળીઓ', 'પાંદડા', 'મરચાં']
+      },
+      visualSymptoms: ['હોડી જેવા વળેલા પાંદડા', 'ડાળીઓ ઉપરથી સુકાવી'],
+      treatmentPlan: {
+        immediateSteps: ['સુકાઈ ગયેલી ડાળીઓ કાપી નાખો', 'ફિપ્રોનિલનો છંટકાવ કરો'],
+        organicSolutions: [],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'ફિપ્રોનિલ 5% SC + એઝોક્સીસ્ટ્રોબિન',
+            commercialNames: 'રીજન્ટ + એમિસ્ટાર',
+            dosagePerLiter: '2 મિ.લી. ફિપ્રોનિલ + 1 મિ.લી. એઝોક્સીસ્ટ્રોબિન પ્રતિ લિટર',
+            recommendedDilution: '400 મિ.લી. + 200 મિ.લી. પ્રતિ એકર',
+            safetyWaitingPeriodDays: 14
+          }
+        ],
+        preventativeMeasures: ['વાદળી ચીકણા ટ્રેપ લગાવો'],
+        sprayingGuidelines: { bestTiming: 'સવારના સમયે', weatherPrecautions: 'છોડને સારી રીતે ભીંજવો', ppeRequired: ['માસ્ક'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'દવાની અસર', actionRequired: 'છંટકાવ કરો' }]
     }
   },
   'sample-potato-early-blight': {
@@ -1283,6 +1490,42 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'காலை வேளையில்', weatherPrecautions: 'அடி இலைகளில் படுமாறு தெளிக்கவும்', ppeRequired: ['முகக்கவசம்'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'நோய் தடுப்பு', actionRequired: 'மான்கோசெப் தெளிக்கவும்' }]
+    },
+    gu: {
+      cropName: 'બટાકા',
+      scientificName: 'Solanum tuberosum',
+      diagnosisName: 'વહેલો સુકારો (અર્લી બ્લાઈટ)',
+      scientificPathogen: 'અલ્ટરનેરિયા સોલાની',
+      issueType: 'ફૂગજન્ય રોગ',
+      severityLevel: 'મધ્યમ',
+      healthScore: 61,
+      affectedAreaPercentage: 22,
+      confidenceScore: 95,
+      summary: 'નીચેના પાંદડા પર ગોળ ચક્ર જેવા ઘેરા ભૂરા ડાઘા અને પીળાશ.',
+      farmerVernacularSummary: 'બટાકામાં વહેલા સુકારાનો રોગ લાગ્યો છે. કંદના સારા વિકાસ માટે તાત્કાલિક મેન્કોઝેબનો છંટકાવ કરો.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડા પીળા પડીને સુકાવા લાગે છે જેનાથી બટાકાનું કદ નાનું રહે છે.',
+        spreadRate: 'મધ્યમ',
+        potentialYieldLossPercent: 30,
+        vulnerableParts: ['નીચેના પાંદડા', 'બટાકાના કંદ']
+      },
+      visualSymptoms: ['ગોળ ચક્ર જેવા ડાઘા'],
+      treatmentPlan: {
+        immediateSteps: ['મેન્કોઝેબનો છંટકાવ કરો'],
+        organicSolutions: [],
+        chemicalSolutions: [
+          {
+            activeIngredient: 'મેન્કોઝેબ 75% WP',
+            commercialNames: 'ડાયથેન એમ-45',
+            dosagePerLiter: '2.5 ગ્રામ પ્રતિ લિટર પાણી',
+            recommendedDilution: '500 ગ્રામ પ્રતિ એકર',
+            safetyWaitingPeriodDays: 7
+          }
+        ],
+        preventativeMeasures: ['પાકની ફેરબદલી કરો'],
+        sprayingGuidelines: { bestTiming: 'સવારના સમયે', weatherPrecautions: 'નીચેના પાંદડા પર સારી રીતે છંટકાવ કરો', ppeRequired: ['માસ્ક'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'રોગ નિયંત્રણ', actionRequired: 'મેન્કોઝેબનો છંટકાવ કરો' }]
     }
   },
   'sample-wheat-healthy': {
@@ -1450,6 +1693,34 @@ export const LOCALIZED_DIAGNOSES: Record<string, Record<string, any>> = {
         sprayingGuidelines: { bestTiming: 'இயல்பு', weatherPrecautions: 'மருந்து தேவையில்லை', ppeRequired: ['எதுவுமில்லை'] }
       },
       recoveryTimeline: [{ day: 1, expectedMilestone: 'நல்ல வளர்ச்சி', actionRequired: 'நீர்பாசனத்தை தொடரவும்' }]
+    },
+    gu: {
+      cropName: 'ઘઉં',
+      scientificName: 'Triticum aestivum',
+      diagnosisName: 'તંદુરસ્ત પાક (રોગમુક્ત)',
+      scientificPathogen: 'કોઈ નહીં (પાક સંપૂર્ણપણે તંદુરસ્ત છે)',
+      issueType: 'તંદુરસ્ત પાક',
+      severityLevel: 'ઓછું',
+      healthScore: 94,
+      affectedAreaPercentage: 2,
+      confidenceScore: 99,
+      summary: 'ઘેરા લીલા તંદુરસ્ત પાંદડા, કોઈ ફૂગ કે જીવાતનો ઉપદ્રવ નથી.',
+      farmerVernacularSummary: 'અભિનંદન! તમારો ઘઉંનો પાક સંપૂર્ણપણે તંદુરસ્ત છે. કોઈપણ જંતુનાશક કે ફૂગનાશક દવાની જરૂર નથી.',
+      damageAnalysis: {
+        leafDamageDescription: 'પાંદડા સંપૂર્ણપણે તંદુરસ્ત અને લીલાછમ છે.',
+        spreadRate: 'ધીમો',
+        potentialYieldLossPercent: 0,
+        vulnerableParts: ['નિયમિત દેખરેખ રાખો']
+      },
+      visualSymptoms: ['સ્વચ્છ લીલા પાંદડા', 'મજબૂત ફૂટ'],
+      treatmentPlan: {
+        immediateSteps: ['કોઈ દવાની જરૂર નથી', 'યોગ્ય સમયે પિયત આપો'],
+        organicSolutions: [],
+        chemicalSolutions: [],
+        preventativeMeasures: ['ગેરુ (રસ્ટ) રોગ માટે નિયમિત દેખરેખ રાખો'],
+        sprayingGuidelines: { bestTiming: 'સામાન્ય સમય', weatherPrecautions: 'દવાની જરૂર નથી', ppeRequired: ['કોઈ નહીં'] }
+      },
+      recoveryTimeline: [{ day: 1, expectedMilestone: 'તંદુરસ્ત વિકાસ', actionRequired: 'સમયસર પિયત આપો' }]
     }
   }
 };

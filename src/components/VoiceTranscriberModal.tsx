@@ -16,7 +16,8 @@ const INDIAN_LANG_NAMES: Record<SupportedLanguage, { label: string; native: stri
   hi: { label: 'Hindi', native: 'हिन्दी' },
   te: { label: 'Telugu', native: 'తెలుగు' },
   kn: { label: 'Kannada', native: 'ಕನ್ನಡ' },
-  ta: { label: 'Tamil', native: 'தமிழ்' }
+  ta: { label: 'Tamil', native: 'தமிழ்' },
+  gu: { label: 'Gujarati', native: 'ગુજરાતી' }
 };
 
 export const VoiceTranscriberModal: React.FC<VoiceTranscriberModalProps> = ({
@@ -225,7 +226,7 @@ export const VoiceTranscriberModal: React.FC<VoiceTranscriberModalProps> = ({
                 {INDIAN_LANG_NAMES[selectedLang].native}
               </span>
             </div>
-            <div className="grid grid-cols-5 gap-1.5">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
               {(Object.keys(INDIAN_LANG_NAMES) as SupportedLanguage[]).map((l) => (
                 <button
                   key={l}
